@@ -7,6 +7,16 @@ nav {
     max-width: 1128px;
 }
 
+.logo {
+    width: 100px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .logo {
+        width: 150px;
+    }
+}
+
 a > p {
     margin-bottom: 0px;
 }
