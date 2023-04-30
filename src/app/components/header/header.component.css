@@ -1,0 +1,45 @@
+header {
+    width: 100vw;
+}
+
+nav {
+    width: 100%;
+    max-width: 1128px;
+}
+
+a > p {
+    margin-bottom: 0px;
+}
+
+.nav-link p {
+    text-decoration: none;
+    color: #666;
+}
+
+.nav-link:hover .icon {
+    filter: brightness(0.245);
+}
+
+.nav-link:hover p {
+    color: #191919;
+}
+
+hr.vertical {
+    color: #191919;
+    margin: 0px auto;
+    height:50px; /* you might need some positioning for this to work, see other questions about 100% height */
+    /* width:1px; */
+    border:1px solid black;
+}
+
+/* ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.separador {
+    height: 30px;
+    border-left: 1.5px solid grey;
+} */
