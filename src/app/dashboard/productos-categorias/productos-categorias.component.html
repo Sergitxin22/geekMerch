@@ -1,0 +1,63 @@
+<h1 class="my-3">Productos Categorías</h1>
+<div class="col text-end">
+  <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#anadirModal">
+    <i class="fa-solid fa-plus"></i> Añadir
+  </button>
+  <ag-grid-angular
+    style="width: 100%; height: 100%"
+    class="ag-theme-alpine text-start"
+    [defaultColDef]="defaultColDef"
+    [columnDefs]="columnDefs"
+    [rowData]="rowData"
+    (gridReady)="onGridReady($event)"
+    [frameworkComponents]="frameworkComponents"
+    [pagination]="true"
+    [paginationPageSize]="10"
+    (cellClicked)="onCellClicked($event)"
+    [gridOptions]="gridOptions"
+    (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+</div>
+
+<div
+  class="modal fade"
+  id="anadirModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  style="display: none"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir Producto Categoría</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formularioNuevaCategoriaProducto">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Producto:</label>
+            <select class="selectpicker" name="producto" data-style="btn-selectpicker" formControlName="Producto">
+              <option [value]="producto.ProductoId" *ngFor="let producto of productos">
+                {{ producto.Nombre }}
+              </option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Categoria:</label>
+            <select class="selectpicker" name="categoria" data-style="btn-selectpicker" formControlName="Categoria">
+              <option [value]="categoria.CategoriaId" *ngFor="let categoria of categorias">
+                {{ categoria.Nombre }}
+              </option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+        <button type="button" class="btn btn-primary" (click)="guardarFormulario()" data-bs-dismiss="modal">
+          Añadir
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

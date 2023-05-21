@@ -1,0 +1,10 @@
+.header {
+    background-color: rgba(255, 255, 255, 0.75);
+
+    z-index: 10;
+    width: 100vw !important;
+    display: flex;
+    position: fixed;
+        /* width: 100%;
+        background-color: aqua; */
+}

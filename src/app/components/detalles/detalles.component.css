@@ -1,0 +1,5 @@
+.carousel-item .img-fluid {
+    max-height: 50vh !important; /* Ajusta el porcentaje deseado según tus necesidades */
+    max-width: 50vh;
+    object-fit: cover;
+  }

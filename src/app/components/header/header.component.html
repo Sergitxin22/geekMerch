@@ -1,25 +1,43 @@
-<header class="d-flex justify-content-center align-items-center px-2 px-xl-0 py-2 py-lg-0">
-  <nav class="d-block d-sm-flex justify-content-between align-items-center text-center">
-    <a href="/">
-      <img class="logo" [src]="logo" width="100px" alt="" />
-    </a>
+<header class="container">
+  <div class="p-3">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap" />
+        </svg> -->
+        <img src="../../../assets/images/logo.png" alt="" style="max-width: 180px" />
+      </a>
 
-    <div class="d-flex align-items-center justify-content-center text-center">
-      <div class="d-none d-lg-block">
-        <ul class="nav nav-pills">
-          <li class="nav-item" *ngFor="let opcion of iconos">
-            <a href="#" class="nav-link text-center" aria-current="page">
-              <img class="icon" [src]="getDatosIcono(opcion.Nombre, 1)" [alt]="getDatosIcono(opcion.Nombre, 2)" />
-              <p>{{ opcion.Texto }}</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <hr class="vertical d-none d-lg-block" />
-      <div class="ms-3 py-2 py-sm-0 text-center">
-        <button type="button" class="btn btn-light rounded-pill px-4 py-2 me-2">Unirse ahora</button>
-        <button type="button" class="btn btn-outline-primary rounded-pill px-4 py-2">Inicia sesión</button>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+        <li><a href="#" class="nav-link px-2 text-black">Features</a></li>
+        <li><a href="#" class="nav-link px-2 text-black">Pricing</a></li>
+        <li><a href="#" class="nav-link px-2 text-black">FAQs</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input
+          type="search"
+          class="form-control form-control-light text-bg-light"
+          placeholder="Search..."
+          aria-label="Search" />
+      </form>
+
+      <div class="text-end">
+        <button type="button" class="btn btn-outline-dark me-2">Login</button>
+        <button type="button" class="btn btn-warning">Sign-up</button>
       </div>
     </div>
-  </nav>
+  </div>
 </header>

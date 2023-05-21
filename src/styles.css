@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+.ck-editor__editable { 
+    min-height: 200px !important;
+    max-height: 200px !important;
+}
